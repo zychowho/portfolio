@@ -78,38 +78,36 @@ export default function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8 mb-12 items-stretch"
+          className="grid md:grid-cols-2 gap-4 mb-12 items-stretch"
         >
           {/* Contact Info */}
-          <motion.div variants={itemVariants} className="space-y-0 flex flex-col">
+          <motion.div variants={itemVariants} className="space-y-4 flex flex-col mt-32">
             <h3 className="text-2xl font-bold text-neon-blue mb-2">Contact Information</h3>
 
-            <div className="grid grid-cols-3 gap-3 flex-1">
-              {[
-                { icon: FiMail, label: 'Email', value: 'bua.paulvincentbscs2022@gmail.com', href: 'mailto:bua.paulvincentbscs2022@gmail.com' },
-                { icon: FiPhone, label: 'Phone', value: '09150633990', href: 'tel:09150633990' },
-                { icon: FiMapPin, label: 'Location', value: 'Phase 9, Package 3c2, Block 8, Lot 45 Bagong Silang Caloocan city', href: '#' },
-              ].map(({ icon: Icon, label, value, href }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  whileHover={{ x: 10 }}
-                  className="flex items-start gap-2 p-2 bg-dark-secondary border border-neon-blue/30 rounded-lg hover:border-neon-blue/60 transition-all duration-300 group flex-1"
+            {[
+              { icon: FiMail, label: 'Email', value: 'bua.paulvincentbscs2022@gmail.com', href: 'mailto:bua.paulvincentbscs2022@gmail.com' },
+              { icon: FiPhone, label: 'Phone', value: '09150633990', href: 'tel:09150633990' },
+              { icon: FiMapPin, label: 'Location', value: 'Phase 9, Package 3c2, Block 8, Lot 45 Bagong Silang Caloocan city', href: '#' },
+            ].map(({ icon: Icon, label, value, href }) => (
+              <motion.a
+                key={label}
+                href={href}
+                whileHover={{ x: 5 }}
+                className="flex items-start gap-3 group hover:text-neon-blue transition-colors"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-neon-blue text-xl flex-shrink-0 mt-1"
                 >
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                    className="p-2 bg-neon-blue/10 rounded-lg text-neon-blue text-lg flex-shrink-0 group-hover:bg-neon-blue/20"
-                  >
-                    <Icon />
-                  </motion.div>
-                  <div>
-                    <p className="text-gray-400 text-xs font-semibold uppercase">{label}</p>
-                    <p className="text-gray-100 text-xs font-medium leading-tight">{value}</p>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
+                  <Icon />
+                </motion.div>
+                <div>
+                  <p className="text-gray-400 text-xs font-semibold uppercase">{label}</p>
+                  <p className="text-gray-100 text-sm font-medium">{value}</p>
+                </div>
+              </motion.a>
+            ))}
           </motion.div>
 
           {/* Contact Form */}
