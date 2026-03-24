@@ -78,11 +78,11 @@ export default function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-4 mb-12 items-stretch"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-12 items-stretch"
         >
           {/* Contact Info */}
-          <motion.div variants={itemVariants} className="space-y-4 flex flex-col mt-32">
-            <h3 className="text-2xl font-bold text-neon-blue mb-2">Contact Information</h3>
+          <motion.div variants={itemVariants} className="space-y-3 flex flex-col">
+            <h3 className="text-xl lg:text-2xl font-bold text-neon-blue mb-2">Contact Information</h3>
 
             {[
               { icon: FiMail, label: 'Email', value: 'bua.paulvincentbscs2022@gmail.com', href: 'mailto:bua.paulvincentbscs2022@gmail.com' },
@@ -93,18 +93,18 @@ export default function Contact() {
                 key={label}
                 href={href}
                 whileHover={{ x: 5 }}
-                className="flex items-start gap-3 group hover:text-neon-blue transition-colors"
+                className="flex items-start gap-2 sm:gap-3 group hover:text-neon-blue transition-colors"
               >
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="text-neon-blue text-xl flex-shrink-0 mt-1"
+                  className="text-neon-blue text-lg sm:text-xl flex-shrink-0 mt-1"
                 >
                   <Icon />
                 </motion.div>
                 <div>
-                  <p className="text-gray-400 text-xs font-semibold uppercase">{label}</p>
-                  <p className="text-gray-100 text-sm font-medium">{value}</p>
+                  <p className="text-gray-400 text-xs sm:text-sm font-semibold uppercase">{label}</p>
+                  <p className="text-gray-100 text-xs sm:text-sm font-medium">{value}</p>
                 </div>
               </motion.a>
             ))}

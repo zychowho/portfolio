@@ -43,14 +43,14 @@ export default function Hero() {
         className="max-w-4xl mx-auto text-center relative z-10"
       >
         {/* Main Heading */}
-        <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 whitespace-nowrap">
+        <motion.h1 variants={itemVariants} className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           <span className="gradient-text">Hi, I'm Paul Vincent G. Bua</span>
         </motion.h1>
 
         {/* Title */}
         <motion.h2
           variants={itemVariants}
-          className="text-2xl sm:text-3xl lg:text-4xl text-neon-blue mb-6 font-semibold"
+          className="text-xl sm:text-3xl lg:text-4xl text-neon-blue mb-6 font-semibold"
         >
           Computer Science Student | Software Developer
         </motion.h2>
@@ -58,7 +58,7 @@ export default function Hero() {
         {/* Tagline */}
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-base sm:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
           Building scalable applications and intelligent systems with modern technologies.
           Passionate about full-stack development, systems design, and creating impactful solutions.
